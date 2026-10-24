@@ -1,0 +1,274 @@
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 46px);
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  margin: 9px 0 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.book-icon {
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 24px;
+  background: #dbeafe;
+  font-size: 38px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card,
+.panel {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 4%);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.stat-card span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  color: #1d4ed8;
+  font-size: 32px;
+}
+
+.panel {
+  margin-bottom: 24px;
+  padding: 26px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.book-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.book-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.book-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #d8e0ec;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.book-form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+.book-form button,
+.secondary-button {
+  align-self: end;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.book-form button {
+  color: #fff;
+  background: #2563eb;
+}
+
+.book-form button:hover {
+  background: #1d4ed8;
+}
+
+.table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.secondary-button {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.secondary-button:hover {
+  background: #dbeafe;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 15px 13px;
+  border-bottom: 1px solid #edf0f5;
+  white-space: nowrap;
+}
+
+th {
+  color: #64748b;
+  background: #f8fafc;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+.quantity {
+  display: inline-block;
+  min-width: 34px;
+  padding: 5px 9px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.error {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  color: #b91c1c;
+  background: #fef2f2;
+  border-radius: 9px;
+}
+
+footer {
+  padding: 10px 0;
+  color: #94a3b8;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 24px, 600px);
+    padding: 26px 0;
+  }
+
+  .book-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats,
+  .book-form {
+    grid-template-columns: 1fr;
+  }
+
+  .book-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .table-heading {
+    align-items: flex-start;
+  }
+}
